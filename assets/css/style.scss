@@ -37,3 +37,4 @@ header a.button { color: $header-bg; background: $accent; border-radius: 6px; }
 .site-nav a { margin-right: 16px; font-weight: bold; }
 
 footer { color: #6b6270; }
+.site-nav a.active { color: $heading; border-bottom: 2px solid $accent; }
