@@ -27,10 +27,12 @@
 
     <div id="content-wrapper">
       <div class="inner clearfix">
-        <nav class="site-nav">
-          <a href="{{ '/' | relative_url }}">Home</a>
-          <a href="{{ '/about' | relative_url }}">About</a>
-        </nav>
+      <nav class="site-nav">
+  {% assign nav_pages = site.pages | where_exp: "p", "p.nav_order" | sort: "nav_order" %}
+  {% for p in nav_pages %}
+    <a href="{{ p.url | relative_url }}"{% if page.url == p.url %} class="active"{% endif %}>{{ p.nav_title | default: p.title }}</a>
+  {% endfor %}
+</nav>
         <section id="main-content">
           {{ content }}
         </section>
