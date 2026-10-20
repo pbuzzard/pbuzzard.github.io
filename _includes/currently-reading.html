@@ -1,0 +1,10 @@
+{%- if site.data.reading and site.data.reading.size > 0 -%}
+<div class="reading-box">
+<h3>Currently reading</h3>
+<ul>
+{%- for book in site.data.reading %}
+<li>{% if book.url %}<a href="{{ book.url }}">{{ book.title }}</a>{% else %}{{ book.title }}{% endif %}{% if book.author %} <span class="reading-meta">by {{ book.author }}</span>{% endif %}{% if book.progress %} <span class="reading-meta">({{ book.progress }})</span>{% endif %}</li>
+{%- endfor %}
+</ul>
+</div>
+{%- endif -%}
