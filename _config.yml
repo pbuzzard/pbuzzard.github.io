@@ -1,5 +1,7 @@
-   theme: jekyll-theme-architect
-   title: Pamela Buzzard
+theme: jekyll-theme-architect
+title: Pamela Buzzard
+description: A place to keep track of my crafting projects and other thoughts.
+
 defaults:
   - scope:
       path: ""
