@@ -6,6 +6,8 @@ nav_title: Home
 
 # A place to keep track of my crafting projects and other thoughts.
 
+{% include currently-reading.html %}
+
 ## Latest posts
 
 {% for post in site.posts limit:5 %}
